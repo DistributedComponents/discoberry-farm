@@ -20,20 +20,28 @@
    "Register Me Now" check box so that the department remembers this pi's
    MAC address.
 
-1. Clone [this repo](https://github.com/DistributedComponents/discoberry-farm):
+1. Clone [this repo](https://github.com/DistributedComponents/discoberry-farm)and change to its top level directory:
 ```
   $ git clone https://github.com/DistributedComponents/discoberry-farm
+  $ cd discoberry-farm
 ```
 
-1. `cd` into the repo and run `apt-update.sh`:
+1. Update apt and ensure system dependencies installed:
 ```
-  $ cd discoberry-farm
   $ sudo ./apt-update.sh
 ```
 
-1. TODO set up Coq
+1. Initialize opam then install Coq and opam dependencies:
+```
+  $ opam init
+  $ eval `opam config env`
+  $ ./opam-update.sh
+```
 
-1. TODO set up Verdi
+1. Install system:
+```
+  $ ./sys-update.sh
+```
 
 1. TODO set up DNS
 
