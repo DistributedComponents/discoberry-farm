@@ -12,7 +12,8 @@ pushd "$SENSOR_NET"
   fi
   pushd StructTact
     git pull
-    ./build.sh
+    ./configure
+    make
   popd
 
   if [ ! -d InfSeqExt ]; then
@@ -20,7 +21,8 @@ pushd "$SENSOR_NET"
   fi
   pushd InfSeqExt
     git pull
-    ./build.sh
+    ./configure
+    make
   popd
 
   if [ ! -d verdi ]; then
@@ -28,7 +30,8 @@ pushd "$SENSOR_NET"
   fi
   pushd verdi
     git pull
-    ./build.sh
+    ./configure
+    make
   popd
 
   if [ ! -d AAC_tactics ]; then
@@ -44,6 +47,7 @@ pushd "$SENSOR_NET"
   fi
   pushd verdi-aggregation
     git pull
-    ./build.sh
+    ./configure
+    make
   popd
 popd
