@@ -35,7 +35,7 @@ pushd "$SENSOR_NET"
   popd
 
   if [ ! -d AAC_tactics ]; then
-    git clone -b v8.5 https://github.com/coq-contribs/aac-tactics.git AAC_tactics
+    git clone -b v8.5 'https://github.com/coq-contribs/aac-tactics.git' AAC_tactics
   fi
   pushd AAC_tactics
     git pull
@@ -43,7 +43,7 @@ pushd "$SENSOR_NET"
   popd
 
   if [ ! -d verdi-aggregation ]; then
-    git clone git@github.com:DistributedComponents/verdi-aggregation.git
+    git clone 'https://github.com/DistributedComponents/verdi-aggregation.git'
   fi
   pushd verdi-aggregation
     git pull
