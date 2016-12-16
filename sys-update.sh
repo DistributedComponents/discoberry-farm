@@ -26,7 +26,7 @@ pushd "$SENSOR_NET"
   popd
 
   if [ ! -d verdi ]; then
-    git clone -b fair-shim-fds 'https://github.com/uwplse/verdi.git'
+    git clone 'https://github.com/uwplse/verdi.git'
   fi
   pushd verdi
     git pull
