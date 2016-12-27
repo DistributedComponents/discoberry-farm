@@ -33,8 +33,15 @@
   $ echo "discoberryNN" > DBFID
 ```
 
-1. Create a file `DNSTOK` with our DuckDNS token. This can be manually
+1. Create a file `DNSTOK` with our Duck DNS token. This can be manually
    copied form another pi in the farm.
+
+1. Make sure this pi is registered on [Duck DNS](https://www.duckdns.org/).
+
+1. Install the crontab:
+```
+  $ crontab crontab
+```
 
 1. Update apt and ensure system dependencies installed:
 ```
