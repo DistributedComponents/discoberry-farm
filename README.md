@@ -3,10 +3,10 @@
 ## Setting Up
 
 1. Download Raspian Jessie with Pixel from
-   [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/).
+   [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/)
 
 1. Write the `.img` to a microSD card following
-   [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+   [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
 1. Put the microSD card in the pi; attach a monitor, keyboard, and mouse;
    then power it up.
