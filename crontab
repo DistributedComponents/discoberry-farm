@@ -1,2 +1,5 @@
+SHELL=/bin/bash
+DBR=$HOME/discoberry-farm
+
 # min  hour  day  mon  dow  command
-  */5  *     *    *    *    $HOME/discoberry-farm/duckdns/duck.sh > /dev/null 2>&1
+  */5  *     *    *    *    $DBR/duckdns/duck.sh > /dev/null 2>&1

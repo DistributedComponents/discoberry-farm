@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-scp -r ~/.ssh "$1:~/"
+TARGET="$1:~/.ssh/"
+
+scp ~/.ssh/authorized_keys \
+    ~/.ssh/id_rsa \
+    ~/.ssh/id_rsa.pub \
+  "$TARGET"
