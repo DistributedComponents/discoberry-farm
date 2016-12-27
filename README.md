@@ -73,6 +73,11 @@
   $ sudo dpkg-reconfigure tzdata
 ```
 
+1. Set the locale to `en_US.UTF-8 UTF-8` and *unset* the GB locale by navigating menus in:
+```
+  $ sudo dpkg-reconfigure locales
+```
+
 1. Set up ssh.  First start up `sshd`:
 ```
   $ sudo /etc/init.d/ssh start
@@ -99,6 +104,10 @@
     PasswordAuthentication no
     UsePAM no
 ```
+  Set sshd to start on boot (under `Interfacing options`):
+```
+  $ sudo raspi-config
+```
   Finally, restart sshd so the changes take effect:
 ```
 	$ sudo /etc/init.d/ssh restart
@@ -109,7 +118,7 @@
   $ sudo reboot
 ```
 
-1. At this point, the pi can be worked on remotely.
+1. *At this point, the pi can be worked on remotely.*
 
 1. Update apt and ensure system dependencies installed:
 ```
