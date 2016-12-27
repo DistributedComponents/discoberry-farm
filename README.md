@@ -20,30 +20,34 @@
    "Register Me Now" check box so that the department remembers this pi's
    MAC address.
 
-1. Clone [this repo](https://github.com/DistributedComponents/discoberry-farm)and change to its top level directory:
+1. From `$HOME` clone [this repo](https://github.com/DistributedComponents/discoberry-farm)
+   and change to its top-level directory:
 ```
   $ git clone https://github.com/DistributedComponents/discoberry-farm
   $ cd discoberry-farm
 ```
+
+1. Create a file `DBFID` with this machine's id (where `NN` is the number
+   of this pi):
+```
+  $ echo "discoberryNN" > DBFID
+```
+
+1. Create a file `DNSTOK` with our DuckDNS token. This can be manually
+   copied form another pi in the farm.
 
 1. Update apt and ensure system dependencies installed:
 ```
   $ sudo ./apt-update.sh
 ```
 
-1. Initialize opam then install Coq and opam dependencies:
-```
-  $ opam init
-  $ eval `opam config env`
-  $ ./opam-update.sh
-```
-
-1. Install system:
-```
-  $ ./sys-update.sh
-```
-
 1. TODO set up DNS
+
+1. From another pi in the farm, do:
+```
+  $ cd discoberry-farm
+  $ copy keys NN
+```
 
 1. TODO copy keys
 
@@ -52,3 +56,12 @@
 1. TODO set timezone
 
 1. TODO set hostname
+
+1. Initialize opam then install Coq and opam dependencies:
+```
+  $ opam init
+  $ eval `opam config env`
+  $ ./opam-update.sh
+```
+
+
