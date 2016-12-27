@@ -27,6 +27,12 @@
   $ cd discoberry-farm
 ```
 
+1. Update apt and ensure system dependencies installed:
+```
+  $ sudo ./apt-update.sh
+```
+  You can continue with the following steps in parallel (until ssh setup).
+
 1. Create a file `DBFID` with this machine's id (where `NN` is the number
    of this pi):
 ```
@@ -43,20 +49,20 @@
   $ crontab crontab
 ```
 
-1. Update apt and ensure system dependencies installed:
+1. Set up ssh.  First start up `sshd`:
 ```
-  $ sudo ./apt-update.sh
+  $ sudo /etc/init.d/ssh start
 ```
-
-1. TODO set up DNS
-
-1. From another pi in the farm, do:
+Get the IP of this pi (DNS may not have updated yet):
 ```
-  $ cd discoberry-farm
-  $ copy keys NN
+  $ ./ip.sh
 ```
-
-1. TODO copy keys
+*From another pi in the farm*, do (where `IP` is the IP address of the pi
+you are setting up):
+```
+  $ cd $HOME/discoberry-farm
+  $ ./copy-keys.sh IP
+```
 
 1. TODO make sshd passwordless
 
