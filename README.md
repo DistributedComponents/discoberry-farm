@@ -13,9 +13,9 @@
 
 1. IMPORTANT: set the password for the `pi` user (default is "raspberry",
    if you do not know the discoberry-farm password, ask Zach):
-```
-  $ passwd
-```
+   ```
+     $ passwd
+   ```
 
 1. Set up the pi's wifi connection to `CSE-Local`. Make sure to check the
    "Register Me Now" check box so that the department remembers this pi's
@@ -123,11 +123,4 @@
 1. Update apt and ensure system dependencies installed:
 ```
   $ sudo ./apt-update.sh
-```
-
-1. Initialize opam then install Coq and opam dependencies:
-```
-  $ opam init
-  $ eval `opam config env`
-  $ ./opam-update.sh
 ```
