@@ -67,40 +67,20 @@
      $ crontab crontab
    ```
 
-1. Set the hostname by runing:
+1. Set the hostname and reboot by runing:
    ```
      $ ./set-hostname.sh
-   ```
-
-
-   ```
-     $ sudo vim /etc/hosts
-   ```
-  and change the *last line* to (where NN is the number of this pi):
-   ```
-       127.0.1.1       discoberryNN
-   ```
-  Next, run:
-   ```
-     $ sudo vim /etc/hostname
-   ```
-  and change the *only line* to (where NN is the number of this pi):
-   ```
-       discoberryNN
-   ```
-  Finally, poke the hostname and networking services so the changes take effect:
-   ```
-   	$ sudo /etc/init.d/hostname.sh start
-   	$ sudo /etc/init.d/networking force-reload
+     $ sudo reboot
    ```
 
 1. Set up ssh.  First start up `sshd`:
    ```
      $ sudo /etc/init.d/ssh start
    ```
-   Get the IP of this pi (DNS may not have updated yet):
+   Get the IP of this pi (DNS may not have updated yet) and create `~/.ssh/`:
    ```
      $ ./ip.sh
+     $ mkdir -p ~/.ssh
    ```
    *From another pi in the farm*, do (where `IP` is the IP address of the pi
    you are setting up):
