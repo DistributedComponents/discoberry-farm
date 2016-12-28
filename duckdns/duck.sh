@@ -2,7 +2,7 @@
 
 DBR="$HOME/discoberry-farm"
 
-D="$(cat "$DBR/DBFID")"
+D="$(hostname)"
 T="$(cat "$DBR/DNSTOK")"
 A="$($DBR/ip.sh)"
 
