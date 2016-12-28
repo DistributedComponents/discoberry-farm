@@ -69,7 +69,7 @@
 
 1. Set the hostname by runing:
    ```
-    sudo ./set-hostname.sh
+     $ ./set-hostname.sh
    ```
 
 
