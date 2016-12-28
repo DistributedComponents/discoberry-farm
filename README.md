@@ -11,10 +11,31 @@
 1. Put the microSD card in the pi; attach a monitor, keyboard, and mouse;
    then power it up.
 
-1. IMPORTANT: set the password for the `pi` user (default is "raspberry",
+1. **IMPORTANT** Set the password for the `pi` user (default is "raspberry",
    if you do not know the discoberry-farm password, ask Zach):
    ```
      $ passwd
+   ```
+
+1. Set the keyboard to US layout by running:
+   ```
+     $ sudo vim /etc/default/keyboard
+   ```
+   and changing `XKBLAYOUT="gb"` to `XKBLAYOUT="us"`
+
+1. Set the timezone to `America/Los_Angeles` by navigating menus in:
+   ```
+     $ sudo dpkg-reconfigure tzdata
+   ```
+
+1. Set the locale to `en_US.UTF-8 UTF-8` and *unset* the GB locale by navigating menus in:
+   ```
+     $ sudo dpkg-reconfigure locales
+   ```
+
+1. Reboot with:
+   ```
+     $ sudo reboot
    ```
 
 1. Set up the pi's wifi connection to `CSE-Local`. Make sure to check the
@@ -46,7 +67,12 @@
      $ crontab crontab
    ```
 
-1. Set the hostname. Run:
+1. Set the hostname by runing:
+   ```
+    sudo ./set-hostname.sh
+   ```
+
+
    ```
      $ sudo vim /etc/hosts
    ```
@@ -66,16 +92,6 @@
    ```
    	$ sudo /etc/init.d/hostname.sh start
    	$ sudo /etc/init.d/networking force-reload
-   ```
-
-1. Set the timezone to `America/Los_Angeles` by navigating menus in:
-   ```
-     $ sudo dpkg-reconfigure tzdata
-   ```
-
-1. Set the locale to `en_US.UTF-8 UTF-8` and *unset* the GB locale by navigating menus in:
-   ```
-     $ sudo dpkg-reconfigure locales
    ```
 
 1. Set up ssh.  First start up `sshd`:
