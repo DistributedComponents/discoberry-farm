@@ -1,7 +1,7 @@
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
-apt-get autoremove
-apt-get install \
+apt-get -y update
+apt-get -y upgrade
+apt-get -y dist-upgrade
+apt-get -y autoremove
+apt-get -y install \
   vim curl openssh-server mosh tmux \
   m4 mercurial darcs build-essential opam

@@ -21,15 +21,13 @@
    address.
 
 1. From `$HOME` clone [this repo](https://github.com/DistributedComponents/discoberry-farm)
-   and change to its top-level directory:
    ```
      $ git clone https://github.com/DistributedComponents/discoberry-farm
-     $ cd discoberry-farm
    ```
 
 1. Update to latest release and install system dependencies:
    ```
-     $ sudo ./apt-update.sh
+     $ sudo $HOME/discoberry-farm/apt-update.sh
      $ sudo reboot
    ```
 
@@ -80,10 +78,10 @@
 
 1. Copy `DNSTOK` from another pi in the farm:
    ```
-     $ scp discoberryNN.duckdns.org:~/discoberry-farm/DNSTOK .
+     $ scp discoberryNN.duckdns.org:~/discoberry-farm/DNSTOK $HOME/discoberry-farm/
    ```
-   If you're setting up any pi numbered 1 - 5, then `NN` should be in that range.
-   If you're setting up any pi numbered 6 - 10, then `NN` should be in that range.
+   If you're setting up a pi numbered 1 - 5, then `NN` should be in that range.
+   If you're setting up a pi numbered 6 - 10, then `NN` should be in that range.
    Next, make sure this pi is registered on [Duck DNS](https://www.duckdns.org/).
    Finally, install the crontab:
    ```
