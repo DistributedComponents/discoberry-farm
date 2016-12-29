@@ -42,10 +42,10 @@
    * keyboard to US layout
    * wifi codes to US
 
-   Under `Interfacing options` set:
+   Under `Interfacing Options` set:
    * ssh to enabled
 
-   Under `Advanced options` set:
+   Under `Advanced Options` set:
    * hostname to `discoberryNN` (where `NN` is the number of this pi)
 
    When you finish, accept the prompt to reboot.
@@ -89,7 +89,5 @@
    Next, make sure this pi is registered on [Duck DNS](https://www.duckdns.org/).
    Finally, install the crontab:
    ```
-     $ crontab crontab
+     $ crontab $HOME/discoberry-farm/crontab
    ```
-
-*At this point, the pi can be worked on remotely.*
