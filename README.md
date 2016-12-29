@@ -35,15 +35,19 @@
    ```
      $ sudo raspi-config
    ```
+
    Under `Localization` set:
    * locale to `en_US.UTF-8 UTF-8` (make sure to *unset* the GB locale)
    * timezone to `America/Los_Angeles`
    * keyboard to US layout
    * wifi codes to US
+
    Under `Interfacing options` set:
    * ssh to enabled
+
    Under `Advanced options` set:
    * hostname to `discoberryNN` (where `NN` is the number of this pi)
+
    When you finish, accept the prompt to reboot.
 
 1. Set up ssh.  Make sure ssh is running (and implicitly create `$HOME/.ssh`):
