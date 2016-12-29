@@ -20,6 +20,13 @@
    Me Now" check box so that the department remembers this pi's MAC
    address.
 
+1. From `$HOME` clone [this repo](https://github.com/DistributedComponents/discoberry-farm)
+   and change to its top-level directory:
+   ```
+     $ git clone https://github.com/DistributedComponents/discoberry-farm
+     $ cd discoberry-farm
+   ```
+
 1. Update to latest release and install system dependencies:
    ```
      $ sudo ./apt-update.sh
@@ -41,20 +48,13 @@
    * hostname to `discoberryNN` (where `NN` is the number of this pi)
    When you finish, accept the prompt to reboot.
 
-1. From `$HOME` clone [this repo](https://github.com/DistributedComponents/discoberry-farm)
-   and change to its top-level directory:
-   ```
-     $ git clone https://github.com/DistributedComponents/discoberry-farm
-     $ cd discoberry-farm
-   ```
-
 1. Set up ssh.  Make sure ssh is running (and implicitly create `$HOME/.ssh`):
    ```
      $ ssh localhost
    ```
    Get the IP of this pi:
    ```
-     $ ./ip.sh
+     $ $HOME/discoberry-farm/ip.sh
    ```
    *From another pi in the farm*, do (where `IP` is the IP address of the pi
    you are setting up):
