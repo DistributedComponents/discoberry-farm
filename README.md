@@ -61,7 +61,7 @@
    *From another pi in the farm*, do (where `IP` is the IP address of the pi
    you are setting up):
    ```
-     $ $HOME/discoberry-farm/copy-keys.sh IP
+     $ $HOME/discoberry-farm/copy-keys-to.sh IP
    ```
    Now to make sshd passwordless, run:
    ```

@@ -16,17 +16,17 @@ DBS="discoberry01.duckdns.org
 
 pids=""
 
-i=0
+i=1
 for db in $DBS; do
   log="$DBFROOT/tmp/$(date +%y%m%d-%H%M%S)-$db-$(printf "%02d" $i).log"
   echo ssh "pi@$db" "'$@'" > "$log"
   echo "------------" >> "$log"
-  ssh "pi@$db" "'$@'" >> "$log" 2>&1 &
+  ssh "pi@$db" "$@" >> "$log" 2>&1 &
   pids="$pids $!"
   i=$(expr $i + 1)
 done
 
-i=0
+i=1
 for pid in $pids; do
   if wait $pid; then
     printf "%02d GOOD\n" $i
