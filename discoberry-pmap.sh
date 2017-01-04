@@ -15,10 +15,12 @@ DBS="discoberry01.duckdns.org
 "
 
 pids=""
+logs=""
 
 i=1
 for db in $DBS; do
   log="$DBFROOT/tmp/$(date +%y%m%d-%H%M%S)-$db-$(printf "%02d" $i).log"
+  logs="$logs $log"
   echo ssh "pi@$db" "'$@'" > "$log"
   echo "------------" >> "$log"
   ssh "pi@$db" "$@" >> "$log" 2>&1 &
@@ -35,3 +37,5 @@ for pid in $pids; do
   fi
   i=$(expr $i + 1)
 done
+
+cat $logs > "$DBFROOT/tmp/$(date +%y%m%d-%H%M%S)-ALL.log"
